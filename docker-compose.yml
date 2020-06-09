@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name:
+      jupyter
+    command:  bash -c "
+        jupyter notebook --ip=0.0.0.0 --port=8000 --allow-root
+      "
+    volumes:
+      - ./src:/code/src
+      - ./Ipython:/code/Ipython
+    ports:
+      - "8000:8000"
