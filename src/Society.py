@@ -82,17 +82,11 @@ class Society:
             f_c = 0
             m_c = 0
             while True:
-                if f_c + m_c > self.max - 1:
-                    break
                 h = next(i)
                 if h.sex is Sex.F:
-                    if f_c > self.max / 2:
-                        continue
                     f_g.append(h)
                     f_c += 1
                 else:
-                    if m_c > self.max / 2:
-                        continue
                     m_g.append(h)
                     m_c += 1
         except StopIteration:
@@ -109,7 +103,7 @@ class Society:
                 f = next(i)
                 m = next(j)
                 f.marriage(m)
-                n = int(gauss(2.6, 1))
+                n = int(gauss(2, 1)) if f_c + m_c > self.max else int(gauss(3, 1))
                 n = n if n > 0 else 0
                 for _ in range(n):
                     f.childbirth()
