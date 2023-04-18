@@ -1,6 +1,7 @@
 matplotlib>=3.1.1
 numpy>=1.17.3
 jupyterlab>=1.2.2
+jupyter-server<2.0.0
 pandas>=0.25.3
 scikit-learn>=0.21.3
 cython>=0.29.14
@@ -18,4 +19,3 @@ vincent>=0.4.4
 xlrd>=1.2.0
 pydotplus>=2.0.2
 dtreeviz>=0.8.1
-
