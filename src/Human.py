@@ -3,8 +3,8 @@ from src.BloodType import BloodFeature, BloodType
 from random import randrange
 
 class Sex(Enum):
-    F = 'femail'
-    M = 'mail'
+    F = 'female'
+    M = 'male'
 
     def __str__(self):
         return f'{self.value}'
