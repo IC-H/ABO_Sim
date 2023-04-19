@@ -4,7 +4,7 @@
 from enum import Enum
 from random import randrange
 
-from blood_type import BloodType
+from .blood_type import BloodType
 
 
 class Sex(Enum):

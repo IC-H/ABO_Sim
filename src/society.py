@@ -3,8 +3,8 @@
 
 from random import randrange, shuffle, gauss
 
-from human import Human, Sex
-from blood_type import BloodFeature
+from .human import Human, Sex
+from .blood_type import BloodFeature
 
 
 class Society:
