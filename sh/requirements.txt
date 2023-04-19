@@ -19,3 +19,4 @@ vincent>=0.4.4
 xlrd>=1.2.0
 pydotplus>=2.0.2
 dtreeviz>=0.8.1
+pylint>=2.17.2
