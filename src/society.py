@@ -72,12 +72,12 @@ class Society:
             i = iter(self.people)
             while True:
                 human = next(i)
-                a_c += int(human.blood.f1 is BloodFeature.A) + \
-                    int(human.blood.f2 is BloodFeature.A)
-                b_c += int(human.blood.f1 is BloodFeature.B) + \
-                    int(human.blood.f2 is BloodFeature.B)
-                o_c += int(human.blood.f1 is BloodFeature.O) + \
-                    int(human.blood.f2 is BloodFeature.O)
+                a_c += int(human.blood.feature1 is BloodFeature.A) + \
+                    int(human.blood.feature2 is BloodFeature.A)
+                b_c += int(human.blood.feature1 is BloodFeature.B) + \
+                    int(human.blood.feature2 is BloodFeature.B)
+                o_c += int(human.blood.feature1 is BloodFeature.O) + \
+                    int(human.blood.feature2 is BloodFeature.O)
                 t_c += 2
         except StopIteration:
             pass
