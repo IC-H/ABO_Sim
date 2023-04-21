@@ -1,6 +1,6 @@
 # ABO Simulation
 
-[![Python package](https://github.com/IC-H/ABO_Sim/actions/workflows/python_package.yml/badge.svg)](https://github.com/IC-H/ABO_Sim/actions/workflows/python_package.yml)
+[![Python Test](https://github.com/IC-H/ABO_Sim/actions/workflows/python_test.yml/badge.svg)](https://github.com/IC-H/ABO_Sim/actions/workflows/python_test.yml)
 
 This repository is simulator for ABO blood type.
 
