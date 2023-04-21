@@ -10,10 +10,10 @@ from .blood_type import BloodFeature
 class Society:
     """class for group of human"""
 
-    def __init__(self, n_count, proportion, max_iter=10000):
+    def __init__(self, population, blood_type_proportion, max_population=10000):
         self.gen = 1
         a_type, b_type, o_type, ab_type = [
-            int(n_count * p) for p in proportion]
+            int(population * p) for p in blood_type_proportion]
 
         def human_generator(blood_type, n_count):
             tmp = [None] * n_count
@@ -34,7 +34,7 @@ class Society:
         tmp += human_generator('OO', o_type)
         tmp += human_generator('AB', ab_type)
         self.people = tmp
-        self.max = max_iter
+        self.max = max_population
 
     def get_proportion(self):
         """get proportion of ABO blood type"""
@@ -62,7 +62,7 @@ class Society:
         ab_p = 1 - a_p - b_p - o_p
         return (f_p, m_p, a_p, b_p, o_p, ab_p)
 
-    def get_blood_feature_portion(self):
+    def get_blood_feature_proportion(self):
         """get proportion of ABO blood feature"""
         a_c = 0
         b_c = 0

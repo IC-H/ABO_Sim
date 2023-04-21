@@ -54,37 +54,47 @@ def test_blood_feature():
     assert f'{BloodFeature.O}' == 'O'
 
 
+def test_blood_type_construction(blood_type_oo, blood_type_ba):
+    assert blood_type_ba.feature == BloodType('A', 'B').feature
+    with pytest.raises(TypeError):
+        BloodType('RH-', BloodFeature.A)
+    with pytest.raises(TypeError):
+        BloodType('RH-', 'RH+')
+    with pytest.raises(TypeError):
+        BloodType(BloodFeature.A, 'RH-')
+
+
 def test_blood_type_oo(blood_type_oo):
-    assert blood_type_oo.feature == 'O'
+    assert f'{blood_type_oo.feature}' == 'O'
 
 
 def test_blood_type_oa(blood_type_oa):
-    assert blood_type_oa.feature == 'A'
+    assert f'{blood_type_oa.feature}' == 'A'
 
 
 def test_blood_type_ob(blood_type_ob):
-    assert blood_type_ob.feature == 'B'
+    assert f'{blood_type_ob.feature}' == 'B'
 
 
 def test_blood_type_ao(blood_type_ao):
-    assert blood_type_ao.feature == 'A'
+    assert f'{blood_type_ao.feature}' == 'A'
 
 
 def test_blood_type_aa(blood_type_aa):
-    assert blood_type_aa.feature == 'A'
+    assert f'{blood_type_aa.feature}' == 'A'
 
 
 def test_blood_type_ab(blood_type_ab):
-    assert blood_type_ab.feature == 'AB'
+    assert f'{blood_type_ab.feature}' == 'AB'
 
 
 def test_blood_type_bo(blood_type_bo):
-    assert blood_type_bo.feature == 'B'
+    assert f'{blood_type_bo.feature}' == 'B'
 
 
 def test_blood_type_ba(blood_type_ba):
-    assert blood_type_ba.feature == 'AB'
+    assert f'{blood_type_ba.feature}' == 'AB'
 
 
 def test_blood_type_bb(blood_type_bb):
-    assert blood_type_bb.feature == 'B'
+    assert f'{blood_type_bb.feature}' == 'B'
